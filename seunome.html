@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title> JavaScript é a chave </title>
+        <link rel="stylesheet" href="seunome.css">
+    </head>
+    <body bgcolor="#808080">
+        <script>
+            function myFunction(){
+                x= document.getElementById ("nome");
+                x.value= x.value.toUpperCase();
+            }
+        </script>
+        Insira seu Nome: <input type="text" id="nome"
+        onchange="myFunction()">
+        <p> Ao clicar, seu nome fica todo maiúsculo </p>
+    </body>
+</html>
