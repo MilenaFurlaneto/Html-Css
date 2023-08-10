@@ -1,0 +1,85 @@
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <title>Acessibilidade Digital</title>
+        <style type="text/css">
+            body{
+                background: #c683ff;
+            }
+            main{
+                background: #fff;
+                width: 70%;
+                margin: 0 auto;
+                padding: 20px;
+                display: block;
+            }
+            label{
+                display: block;
+                margin-top: 15px;
+            }
+            p{
+                color: #ffd754;
+                font-size: 14pt;
+                font-family: Verdana;
+            }
+            h1{
+                color: #ffd754;
+                font-size: 18.5pt;
+                font-family: Verdana;
+            }
+            .full{
+                width: 60%;
+            }
+            .altura{
+                height: 300px;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <h1> Formulário de Cadastro</h1>
+
+        <p><label for="campo"> * Campo Obrigatório </label>
+        <label for="nome"> Nome* </label>
+        <input type="text" class="full" id="nome" name="nome" placeholder="Seu nome aqui ..."
+        required aria-required="true" aria-label="Nome" />
+
+        <label for="sobrenome"> Sobrenome* </label>
+        <input type="text" class="full" id="sobrenome" name="sobrenome" placeholder="Seu sobrenome aqui ..."
+        required aria-label="Sobrenome" aria-required="true" />
+
+        <label for="telefone"> Telefone* </label>
+        <input type="number" id="telefone" name="telefone" 
+        required aria-label="Telefone" aria-required="true" aria-invalid="false" />
+
+        <label for="idade"> Idade* </label>
+        <input type="number" id="idade" name="idade" min="0" max="120" required />
+        <div class="help-text"> Insira idade entre 0 e 120 anos </div> </p>
+
+        <p><label for="email"> Email* </label>
+        <input type="text" class="full" id="email" name="email" placeholder="Seu email aqui ..."
+        required aria-describedby="emailFormat" aria-required="true" aria-invalid="true" aria-label="Email" />
+        <div class="instruction" id="emailFormat"> Exemplo: nome@dominio.com </div>
+        <div role="alert"><label for="email" class="error"> Por favor entre com um email válido </label></div></p>
+
+        <p><label for="senha1"> Senha* </label>
+        <input type="password" class="full" id="senha1" name="senha1"
+    required maxlength="10" aria-required="true" aria-label="Senha1" />
+
+    <label for="senha2"> Repete senha* </label>
+    <input type="password" class="full" id="senha2" name="senha2"
+    required maxlength="10" aria-required="true" aria-label="Senha2" />
+
+    <label for="genero"> Gênero* </label>
+    <select id="genero" name="genero">
+        <option value="masculino">Masculino</option>
+        <option value="feminino">Feminino</option>
+        <option value="outro">Prefiro não dizer</option>
+    </select>
+
+    <label for="mensagem"> Mensagem* </label>
+    <textarea class="full altura" id="mensagem" name="mensagem">Digite sua mensagem ...
+    </textarea></p>
+    <button type="submit">Enviar</button>
+    </body>
+</html>
