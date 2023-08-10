@@ -1,0 +1,33 @@
+<body>
+    <style>
+        .item1 {grid-area: header;}
+        .item2 {grid-area: menu;}
+        .item3 {grid-area: main;}
+        .item4 {grid-area: right;}
+        .item5 {grid-area: footer;}
+
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+            'header header header header header header'
+            'menu main main main right right'
+            'menu footer footer footer footer';
+            gap:10px;
+            background-color:#f41b6a;
+            padding:10px;
+        }
+        .grid-container>div{
+            background-color: rgba(255, 172, 205, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+    </style>
+    <h1> Barbie ultrapassa US$ 1 bilhão em bilheteria global </h1>  
+    <div class="grid-container">
+        <div class =".item1">Comprar ingressos</div>
+        <div class =".item2">Comprar bonecas</div>
+        <div class =".item3">Comprar Combo do BK</div>
+        <div class =".item4">Assistir trailer</div>
+        <div class =".item5">Mais informações</div>
+</body>
